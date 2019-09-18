@@ -6,12 +6,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.example.myfirstapplication.broadcast.BroadcastManager;
 import com.example.myfirstapplication.broadcast.BroadcastManagerCallerInterface;
+import com.example.myfirstapplication.database.AppDatabase;
 import com.example.myfirstapplication.gps.GPSManager;
 import com.example.myfirstapplication.gps.GPSManagerCallerInterface;
+import com.example.myfirstapplication.model.User;
 import com.example.myfirstapplication.network.SocketManagementService;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -34,6 +37,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.room.Room;
 
 import android.view.Menu;
 import android.widget.ArrayAdapter;
@@ -64,7 +68,19 @@ public class MainActivity extends AppCompatActivity
     ArrayList<String> listOfMessages=new ArrayList<>();
     ArrayAdapter<String> adapter ;
     boolean serviceStarted=false;
+    AppDatabase appDatabase;
 
+
+    public void initializeDataBase(){
+        try{
+            appDatabase= Room.
+                    databaseBuilder(this,AppDatabase.class,
+                            "app-database").
+                    fallbackToDestructiveMigration().build();
+        }catch (Exception error){
+            Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
+        }
+    }
     public void initializeGPSManager(){
         gpsManager=new GPSManager(this,this);
         gpsManager.initializeLocationManager();
@@ -109,11 +125,32 @@ public class MainActivity extends AppCompatActivity
                 serviceStarted=true;
             }
         });
+        initializeDataBase();
         initializeGPSManager();
         initializeOSM();
         initializeBroadcastManagerForSocketIO();
         adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, listOfMessages);
     }
+
+    public void createUser(String userName, String userEmail,String userPassword){
+        final User user=new User();
+        user.userName=userName;
+        user.userEmail=userEmail;
+        user.password=userPassword;
+        try {
+            AsyncTask.execute(new Runnable() {
+                @Override
+                public void run() {
+                    appDatabase.UserDao().insertAll(user);
+                }
+            });
+
+        }catch (Exception error){
+            Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
+        }
+    }
+
+
 
     @Override
     public void onBackPressed() {
@@ -157,8 +194,16 @@ public class MainActivity extends AppCompatActivity
             broadcastManagerForSocketIO.sendBroadcast(SocketManagementService.CLIENT_TO_SERVER_MESSAGE,"test");
 
         } else if (id == R.id.nav_gallery) {
+            createUser("asaad","asaad@uninorte.edu.co","12345");
 
         } else if (id == R.id.nav_slideshow) {
+            AsyncTask.execute(new Runnable() {
+                @Override
+                public void run() {
+                    int amount=appDatabase.UserDao().getAll().size();
+                }
+            });
+
 
         } else if (id == R.id.nav_tools) {
 
