@@ -1,0 +1,4 @@
+com\server\objects\ServerQuery.class
+com\mycompany\webservicerest\resources\JavaEE8Resource.class
+com\mycompany\webservicerest\ServerResource.class
+com\mycompany\webservicerest\JAXRSConfiguration.class
