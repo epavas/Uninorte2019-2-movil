@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity
     GPSManager gpsManager;
     private MapView map;
     private MyLocationNewOverlay mLocationOverlay;
+    private EditText editTextMessage;
+    private ListView listViewMessages;
+    String  user;
     BroadcastManager broadcastManagerForSocketIO;
     ArrayList<String> listOfMessages=new ArrayList<>();
     ArrayAdapter<String> adapter ;
@@ -148,19 +151,29 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        String user=getIntent().getExtras().
+        user=getIntent().getExtras().
                 getString("user_name");
         Toast.makeText(
                 this,
                 "Welcome "+user,Toast.LENGTH_SHORT).
                 show();
 
+        editTextMessage = ((EditText)findViewById(R.id.editTextMessage));
 
         ((Button)findViewById(R.id.buttonSend)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String message = ((EditText)findViewById(R.id.editTextMessage)).getText()+"";
-                sendBroadcastMessage(message);
+
+                String message = editTextMessage.getText()+"";
+                //sendBroadcastMessage(user+message);
+                editTextMessage.setText("");
+                if(serviceStarted)
+                    if(broadcastManagerForSocketIO!=null){
+                        broadcastManagerForSocketIO.sendBroadcast(
+                                SocketManagementService.CLIENT_TO_SERVER_MESSAGE,
+                                user+": "+message);
+                    }
+
             }
         });
         ((Button)findViewById(R.id.start_service_button)).setOnClickListener(new View.OnClickListener() {
@@ -300,7 +313,7 @@ public class MainActivity extends AppCompatActivity
             if(broadcastManagerForSocketIO!=null){
                 broadcastManagerForSocketIO.sendBroadcast(
                         SocketManagementService.CLIENT_TO_SERVER_MESSAGE,
-                        location.getLatitude()+" / "+location.getLongitude());
+                        user+": "+location.getLatitude()+" / "+location.getLongitude());
             }
     }
 
@@ -401,9 +414,11 @@ public class MainActivity extends AppCompatActivity
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                listOfMessages.add(message);
-                ((ListView)findViewById(R.id.messages_list_view)).setAdapter(adapter);
+                listOfMessages.add( message);
+                listViewMessages = ((ListView)findViewById(R.id.messages_list_view));
+                listViewMessages.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
+                listViewMessages.setSelection(listOfMessages.size() - 1);
             }
         });
 

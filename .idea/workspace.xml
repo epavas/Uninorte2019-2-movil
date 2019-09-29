@@ -10,128 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="711d59ca-4cf4-4ff9-a527-c22fa6fbc813" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/seviceWEB/BaseVolleyFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/seviceWEB/ClientServerWeb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/seviceWEB/ServerQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/seviceWEB/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/seviceWEB/VolleyS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_guava_2_2_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_guava_2_2_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_ktx_2_2_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_ktx_2_2_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_runtime_2_2_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_runtime_2_2_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_rxjava2_2_2_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_rxjava2_2_2_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_testing_2_2_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_testing_2_2_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_2_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_2_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_framework_2_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_framework_2_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_osmdroid_osmdroid_android_6_0_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_osmdroid_osmdroid_android_6_0_3_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/build/classes/clientservermodel/ClientServerModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/build/classes/clientservermodel/ClientServerModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/build/classes/com/clientserver/model/tcp/TCPClientManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/build/classes/com/clientserver/model/tcp/TCPClientManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/build/classes/com/clientserver/model/tcp/TCPClientManagerInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/build/classes/com/clientserver/model/tcp/TCPClientManagerInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/build/classes/com/clientserver/model/tcp/TCPServerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/build/classes/com/clientserver/model/tcp/TCPServerManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/build-impl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/genfiles.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/ClientServerModel/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/build/classes/tcpclient/GUIForTCPClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/build/classes/tcpclient/GUIForTCPClient$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/build/classes/tcpclient/GUIForTCPClient$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/build/classes/tcpclient/GUIForTCPClient$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/build/classes/tcpclient/GUIForTCPClient$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/build/classes/tcpclient/GUIForTCPClient$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/build/classes/tcpclient/GUIForTCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/build/classes/tcpclient/GUIForTCPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/nbproject/build-impl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/nbproject/genfiles.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/ClientServerModel/TCPClient/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceClient/src/main/java/com/mycompany/webserviceclient/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceClient/src/main/java/com/mycompany/webserviceclient/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceClient/src/main/java/com/server/objects/ServerQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceClient/src/main/java/com/server/objects/ServerQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceClient/target/classes/com/mycompany/webserviceclient/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceClient/target/classes/com/mycompany/webserviceclient/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceClient/target/classes/com/server/objects/ServerQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceClient/target/classes/com/server/objects/ServerQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/nb-configuration.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/src/main/java/com/mycompany/webservicerest/JAXRSConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/src/main/java/com/mycompany/webservicerest/ServerResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/src/main/java/com/mycompany/webservicerest/resources/JavaEE8Resource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/src/main/java/com/server/objects/ServerQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/src/main/webapp/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/WEB-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/webservicerest/JAXRSConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/webservicerest/ServerResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/webservicerest/resources/JavaEE8Resource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/WEB-INF/classes/com/server/objects/ServerQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/WEB-INF/lib/gson-2.8.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/WebServiceREST-1.0-SNAPSHOT/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/classes/com/mycompany/webservicerest/JAXRSConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/classes/com/mycompany/webservicerest/ServerResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/classes/com/mycompany/webservicerest/resources/JavaEE8Resource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/classes/com/server/objects/ServerQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/endorsed/javaee-api-8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaProjects/WebServiceREST/WebServiceREST/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,7 +28,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="M4VDU18207001593" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="04954c0f9805" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -156,19 +41,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="409" selection-start-line="409" selection-end-line="409" />
+            <state relative-caret-position="89">
+              <caret line="412" column="90" selection-start-line="412" selection-start-column="90" selection-end-line="412" selection-end-column="90" />
               <folding>
                 <element signature="method#initializeDataBase#0;class#MainActivity#0" />
                 <element signature="method#initializeGPSManager#0;class#MainActivity#0" />
                 <element signature="method#initializeBroadcastManagerForSocketIO#0;class#MainActivity#0" />
-                <element signature="e#5699#5837#0" expanded="true" />
-                <element signature="e#5836#5837#0" expanded="true" />
-                <element signature="e#5699#6733#0" expanded="true" />
-                <element signature="e#6732#6733#0" expanded="true" />
+                <element signature="e#5861#6491#0" expanded="true" />
+                <element signature="e#6490#6491#0" expanded="true" />
+                <element signature="e#6571#7613#0" expanded="true" />
+                <element signature="e#7612#7613#0" expanded="true" />
                 <element signature="method#createUser#0;class#MainActivity#0" />
-                <element signature="e#7266#7435#0" expanded="true" />
-                <element signature="e#7434#7435#0" expanded="true" />
+                <element signature="e#8146#8315#0" expanded="true" />
+                <element signature="e#8314#8315#0" expanded="true" />
                 <element signature="method#onBackPressed#0;class#MainActivity#0" />
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" />
@@ -177,7 +62,72 @@
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" />
                 <element signature="method#initializeOSM#0;class#MainActivity#0" />
                 <element signature="method#setMapCenter#0;class#MainActivity#0" />
+                <element signature="e#13786#14060#0" expanded="true" />
+                <element signature="e#14059#14060#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/app/Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="6283" selection-start-line="6283" selection-end-line="6283" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="6610" selection-start-line="6610" selection-end-line="6610" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/broadcast/BroadcastManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/app/LoadedApk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="1399" selection-start-line="1399" selection-end-line="1399" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/os/Handler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/os/Looper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="193" selection-start-line="193" selection-end-line="193" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-33">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -205,6 +155,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>List</find>
+      <find>user</find>
+      <find>lv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,8 +173,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/seviceWEB/VolleyS.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/seviceWEB/BaseVolleyFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -275,8 +227,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_27" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-09-26T10:26:16.229Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="M4VDU18207001593" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-09-29T04:26:29.296Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunDashboard">
@@ -422,6 +374,14 @@
       <option name="presentableId" value="Default" />
       <updated>1568923023142</updated>
     </task>
+    <task id="LOCAL-00001" summary="Messages por consola">
+      <created>1569730797419</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569730797419</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -435,6 +395,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="32" width="1346" height="688" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.32970452" />
@@ -445,14 +406,14 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="0" sideWeight="0.45878693" visible="true" weight="0.32972974" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4976672" weight="0.32972974" />
-      <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.496112" weight="0.32972974" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49300155" weight="0.32792792" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4984448" weight="0.32972974" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.54121304" side_tool="true" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.45645413" weight="0.32972974" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4968896" weight="0.32972974" />
+      <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49455675" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.66562986" visible="true" weight="0.46846846" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.496112" weight="0.32972974" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.33437014" side_tool="true" weight="0.46846846" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.42457232" weight="0.32972974" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.42379472" weight="0.32972974" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" sideWeight="0.4992224" weight="0.32972974" />
       <window_info anchor="right" id="Preview" weight="0.20684293" />
@@ -463,6 +424,10 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Assistant" order="5" weight="0.33514774" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Messages por consola" />
+    <option name="LAST_COMMIT_MESSAGE" value="Messages por consola" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -499,27 +464,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java</url>
-          <line>116</line>
+          <line>119</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java</url>
-          <line>112</line>
+          <line>115</line>
           <properties />
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java</url>
+          <line>311</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java</url>
+          <line>166</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java</url>
+          <line>416</line>
+          <properties />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/content/BroadcastReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/content/Context.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-442">
@@ -553,13 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/broadcast/BroadcastManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/network/ClientSocketManagerCallerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -571,27 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="24769" selection-start-line="24769" selection-end-line="24769" />
         </state>
       </provider>
     </entry>
@@ -696,13 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/content/ContextWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -724,21 +665,77 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6610" selection-start-line="6610" selection-end-line="6610" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6283" selection-start-line="6283" selection-end-line="6283" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/broadcast/BroadcastManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/content/BroadcastReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="605" selection-start-line="605" selection-end-line="605" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/app/LoadedApk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="1399" selection-start-line="1399" selection-end-line="1399" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="193" selection-start-line="193" selection-end-line="193" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myfirstapplication/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="409" selection-start-line="409" selection-end-line="409" />
+        <state relative-caret-position="89">
+          <caret line="412" column="90" selection-start-line="412" selection-start-column="90" selection-end-line="412" selection-end-column="90" />
           <folding>
             <element signature="method#initializeDataBase#0;class#MainActivity#0" />
             <element signature="method#initializeGPSManager#0;class#MainActivity#0" />
             <element signature="method#initializeBroadcastManagerForSocketIO#0;class#MainActivity#0" />
-            <element signature="e#5699#5837#0" expanded="true" />
-            <element signature="e#5836#5837#0" expanded="true" />
-            <element signature="e#5699#6733#0" expanded="true" />
-            <element signature="e#6732#6733#0" expanded="true" />
+            <element signature="e#5861#6491#0" expanded="true" />
+            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#6571#7613#0" expanded="true" />
+            <element signature="e#7612#7613#0" expanded="true" />
             <element signature="method#createUser#0;class#MainActivity#0" />
-            <element signature="e#7266#7435#0" expanded="true" />
-            <element signature="e#7434#7435#0" expanded="true" />
+            <element signature="e#8146#8315#0" expanded="true" />
+            <element signature="e#8314#8315#0" expanded="true" />
             <element signature="method#onBackPressed#0;class#MainActivity#0" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" />
@@ -747,6 +744,8 @@
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" />
             <element signature="method#initializeOSM#0;class#MainActivity#0" />
             <element signature="method#setMapCenter#0;class#MainActivity#0" />
+            <element signature="e#13786#14060#0" expanded="true" />
+            <element signature="e#14059#14060#0" expanded="true" />
           </folding>
         </state>
       </provider>
