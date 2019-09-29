@@ -1,19 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.server.objects;
+package com.example.myfirstapplication.seviceWEB;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- *
- * @author asaad
- */
 public class ServerQuery {
-    
+
     private String userState;
     private String query;
     private String response;
@@ -25,7 +13,7 @@ public class ServerQuery {
     public void setResponse(String response) {
         this.response = response;
     }
-    
+
 
     public String getUserState() {
         return userState;
@@ -47,5 +35,5 @@ public class ServerQuery {
         this.userState = userState;
         this.query = query;
     }
-    
+
 }

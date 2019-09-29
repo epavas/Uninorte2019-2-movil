@@ -16,6 +16,7 @@ import com.example.myfirstapplication.gps.GPSManager;
 import com.example.myfirstapplication.gps.GPSManagerCallerInterface;
 import com.example.myfirstapplication.model.User;
 import com.example.myfirstapplication.network.SocketManagementService;
+import com.example.myfirstapplication.seviceWEB.Test;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -55,6 +56,10 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider;
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,6 +74,7 @@ public class MainActivity extends AppCompatActivity
     ArrayAdapter<String> adapter ;
     boolean serviceStarted=false;
     AppDatabase appDatabase;
+    Test serviceTest;
 
 
     public void initializeDataBase(){
@@ -90,6 +96,41 @@ public class MainActivity extends AppCompatActivity
         broadcastManagerForSocketIO=new BroadcastManager(this,
                 SocketManagementService.
                         SOCKET_SERVICE_CHANNEL,this);
+
+    }
+
+    public String enviarDatosGET(String ip){
+        URL url= null;
+        String linea = "";
+        int respuesta = 0;
+        StringBuilder resul =  null;
+        String endpoint="http://127.0.0.1:8080/WebServiceREST/resources/server";
+        String methodType="GET";
+        String action="";
+
+        try{
+            url=new URL(endpoint+"/"+action);
+            HttpURLConnection urlConnection=(HttpURLConnection)url.openConnection();
+            //urlConnection.setRequestMethod("POST");
+            respuesta = urlConnection.getResponseCode();
+
+            resul = new StringBuilder();
+
+            if (respuesta == HttpURLConnection.HTTP_OK){
+                BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+
+                while ((linea=reader.readLine())!=null){
+                    resul.append(linea);
+                }
+            }
+
+        }catch(Exception error) {
+            System.out.println(error.getMessage());
+            Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
+        }
+        Toast.makeText(this,resul.toString()+"",Toast.LENGTH_LONG).show();
+        return  resul.toString();
+
     }
 
     @Override
@@ -113,6 +154,15 @@ public class MainActivity extends AppCompatActivity
                 this,
                 "Welcome "+user,Toast.LENGTH_SHORT).
                 show();
+
+
+        ((Button)findViewById(R.id.buttonSend)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String message = ((EditText)findViewById(R.id.editTextMessage)).getText()+"";
+                sendBroadcastMessage(message);
+            }
+        });
         ((Button)findViewById(R.id.start_service_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,6 +173,13 @@ public class MainActivity extends AppCompatActivity
                 intent.setAction(SocketManagementService.ACTION_CONNECT);
                 startService(intent);
                 serviceStarted=true;
+                String server_host = ((EditText)findViewById(R.id.server_ip_txt)).getText()+"";
+               // String message = enviarDatosGET(server_host);
+                //Toast.makeText(this,message,Toast.LENGTH_LONG).show();
+                //listOfMessages.add(message);
+                //((ListView)findViewById(R.id.messages_list_view)).setAdapter(adapter);
+                //adapter.notifyDataSetChanged();
+
             }
         });
         initializeDataBase();
@@ -244,6 +301,15 @@ public class MainActivity extends AppCompatActivity
                 broadcastManagerForSocketIO.sendBroadcast(
                         SocketManagementService.CLIENT_TO_SERVER_MESSAGE,
                         location.getLatitude()+" / "+location.getLongitude());
+            }
+    }
+
+    public void sendBroadcastMessage(String message){
+        if(serviceStarted)
+            if(broadcastManagerForSocketIO!=null){
+                broadcastManagerForSocketIO.sendBroadcast(
+                        SocketManagementService.CLIENT_TO_SERVER_MESSAGE,
+                        message);
             }
     }
 

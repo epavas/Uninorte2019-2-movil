@@ -20,9 +20,23 @@ import java.net.URL;
 public class Test {
     
     public static void main(String[] args){
+        //try{
+            URL url= null;
+        String linea = "";
+        int respuesta = 0;
+        StringBuilder resul =  null;
+        String endpoint="http://127.0.0.1:8080/WebServiceREST/resources/server";
+        String methodType="GET";
+        String action="";
+
         try{
+            url=new URL(endpoint+"/"+action);
+            HttpURLConnection urlConnection=(HttpURLConnection)url.openConnection();
+            respuesta = urlConnection.getResponseCode();
+
+            resul = new StringBuilder();
             
-            String endpoint="http://localhost:8080/WebServiceREST/resources/server";
+          /*  String endpoint="http://localhost:8080/WebServiceREST/resources/server";
             String methodType="PUT";
             String action="executeAtServerSide";
             URL url=new URL(endpoint+"/"+action);
@@ -38,7 +52,7 @@ public class Test {
             Gson gson=new Gson();
             String serializedQuery=gson.toJson(query);
             writer.write(serializedQuery);
-            writer.flush();
+            writer.flush();*/
             int httpResponseCode=urlConnection.getResponseCode();
             if(httpResponseCode==HttpURLConnection.HTTP_OK){
                 BufferedReader reader=new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
@@ -46,6 +60,8 @@ public class Test {
                 while((newLine=reader.readLine())!=null){
                     System.out.println(newLine);
                 }
+            }else{
+                System.out.println("No concected");
             }
             
             
