@@ -79,6 +79,30 @@ public class User {
         if(oldOne.username.equals(newOne.username)){
             if(!oldOne.first_name.equals(newOne.first_name)){
                 differences.put("first_name", newOne.first_name);
+            }else if(!oldOne.last_name.equals(newOne.last_name)){
+                differences.put("last_name", newOne.last_name);
+            }else if(!oldOne.full_name.equals(newOne.full_name)){
+                differences.put("full_name", newOne.full_name);
+            }else if(!oldOne.email.equals(newOne.email)){
+                differences.put("email", newOne.email);
+            }else if(!oldOne.getLastLatString().equals(newOne.getLastLatString())){
+                differences.put("lastLat", newOne.getLastLatString());
+            }else if(!oldOne.getLastLonString().equals(newOne.getLastLonString())){
+                differences.put("lastLon", newOne.getLastLonString());
+            }else if(!oldOne.status.equals(newOne.status)){
+                differences.put("status", newOne.status);
+            }else if(!oldOne.getLastSeenISOFormatted().equals(newOne.getLastSeenISOFormatted())){
+                differences.put("lastSeen", newOne.getLastSeenISOFormatted());
+            }
+        }
+        return differences;
+    }
+    
+    public static HashMap<String, String> compareWhithPw(User oldOne, User newOne){
+        HashMap<String, String> differences = new HashMap<>();
+        if(oldOne.username.equals(newOne.username)){
+            if(!oldOne.first_name.equals(newOne.first_name)){
+                differences.put("first_name", newOne.first_name);
             }else if(oldOne.getPassword()== null || !oldOne.password.equals(newOne.password)){
                 differences.put("password", newOne.password);
             }else if(!oldOne.last_name.equals(newOne.last_name)){

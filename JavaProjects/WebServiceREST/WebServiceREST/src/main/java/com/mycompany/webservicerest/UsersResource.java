@@ -61,6 +61,23 @@ public class UsersResource {
     }
 
     @GET
+    @Path("pw")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllUserWithPW() {
+        try {
+            System.out.println("obteniendo:::...");
+            List<User> users =  UserDB.getAllUsersWithPW();
+            
+            String json = new Gson().toJson(users);
+            return Response.ok(json, MediaType.APPLICATION_JSON).build();
+        } catch (Exception ex) {
+            return Response.status(Response.Status.SEE_OTHER)
+                    .entity("Error al consultar los datos"+ex.getMessage())
+                    .build();
+        }
+    }
+    
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllUser() {
         try {
@@ -73,6 +90,8 @@ public class UsersResource {
                     .build();
         }
     }
+    
+    
     
     @GET
     @Path("{username}/{password}")
@@ -155,6 +174,43 @@ public class UsersResource {
         User oldOne = null;
         User newOne = null;
         try {
+            oldOne = UserDB.getUser(username);
+            newOne = new Gson().fromJson(userRegistro, User.class);
+            HashMap<String, String> changes = User.compare(oldOne, newOne);
+            if(changes.size() > 0){
+                if(UserDB.modifyUser(username, changes)){
+
+                    return Response.status(Response.Status.OK)
+                        .entity("Los cambios han sido aplicados: " + username)
+                        .build();
+                }else{
+                    return Response.status(Response.Status.SEE_OTHER)
+                        .entity("Parece ser un problema de conexión, por favor intente nuevamente más tarde: " + username)
+                        .build();   
+                }
+            }else{
+                return Response.status(Response.Status.SEE_OTHER)
+                        .entity("No hay cambios a: " + username + "")
+                        .build();
+            }
+        } catch (Exception er) {
+            return Response.status(Response.Status.SEE_OTHER)
+                    .entity("No se pudo actualizar Registo: " + username)
+                    .build();
+        }
+    }
+    
+    @PUT
+    @Path("pw/{username}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateUserWhithPw(@PathParam("username") String username, String userRegistro) {
+        System.out.println("Llego una actualizacion");
+        
+        
+        User oldOne = null;
+        User newOne = null;
+        try {
             oldOne = UserDB.getUserWithPw(username);
             newOne = new Gson().fromJson(userRegistro, User.class);
             HashMap<String, String> changes = User.compare(oldOne, newOne);
@@ -171,7 +227,7 @@ public class UsersResource {
                 }
             }else{
                 return Response.status(Response.Status.SEE_OTHER)
-                        .entity("Los cambios a: " + username + "No fueron aplicados.")
+                        .entity("No hay cambios a: " + username + "")
                         .build();
             }
         } catch (Exception er) {

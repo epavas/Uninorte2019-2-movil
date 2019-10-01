@@ -5,6 +5,7 @@
  */
 package com.mycompany.bd;
 
+import com.google.gson.Gson;
 import com.server.objects.CurrentLocation;
 import com.server.objects.Location;
 import com.server.objects.Message;
@@ -40,6 +41,46 @@ public class UserDB {
                 queryResult.add(
                     new User(
                         rs.getString("username"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name"),
+                        rs.getString("full_name"),
+                        rs.getString("email"),
+                        rs.getString("lastLat"),
+                        rs.getString("lastLon"),
+                        rs.getString("status"),
+                        rs.getString("lastSeen")
+                    )
+                );
+            }
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }finally{
+            try {
+                if (dbConnection != null) {
+                    System.out.println("[API] Closing connection...");
+                    dbConnection.close();
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return queryResult;
+    }
+    
+    public static final ArrayList<User> getAllUsersWithPW() throws ParseException{
+        ArrayList<User> queryResult = new ArrayList<>();
+        String query = "SELECT * FROM user;";
+        Connection dbConnection = ConexionBD.getConexion();
+        try(
+            Statement stmt = dbConnection.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+        ){
+            System.out.println("[API] Fetching results...");
+            while (rs.next()) {
+                queryResult.add(
+                    new User(
+                        rs.getString("username"),
+                        rs.getString("password"),
                         rs.getString("first_name"),
                         rs.getString("last_name"),
                         rs.getString("full_name"),
@@ -160,7 +201,7 @@ public class UserDB {
             ResultSet rs = pstmt.executeQuery();
             System.out.println("[API] Fetching results...");
             while (rs.next()) {
-                
+                String s = rs.getString("password");
                 queryResult.setUsername(rs.getString("username"));
                 queryResult.setFirst_name(rs.getString("first_name"));
                 queryResult.setLast_name(rs.getString("last_name"));
