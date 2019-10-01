@@ -55,7 +55,7 @@ public class LocationResource {
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUsers() throws ParseException{
+    public Response getLocations() throws ParseException{
         ArrayList<CurrentLocation> response = LocationDB.getCurrentLocations();
         return Response.ok(gson.toJson(response),MediaType.TEXT_PLAIN).build();
         
@@ -73,7 +73,7 @@ public class LocationResource {
             User user = UserDB.getUser(location.getUsername());
             user.setLastLat(location.getLat());
             user.setLastLon(location.getLon());
-            user.setLastSeen(location.getLocation_timestamp());
+            user.setLastSeen(location.getLastSeen());
             if(UserDB.modifyUser(user.getUsername(), User.compare(oldUser, user))){
                 
                 return Response.ok("Ubicacion actualizada con exito ",MediaType.TEXT_PLAIN).build();

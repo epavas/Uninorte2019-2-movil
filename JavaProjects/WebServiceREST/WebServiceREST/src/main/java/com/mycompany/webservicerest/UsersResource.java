@@ -116,6 +116,11 @@ public class UsersResource {
         try {
             User user = UserDB.getUser(username);
             String json = new Gson().toJson(user);
+            if(user.getUsername()== null){
+                return Response.status(Response.Status.SEE_OTHER)
+                    .entity("Error: No existe usuario")
+                    .build();
+            }
             return Response.ok(json, MediaType.APPLICATION_JSON).build();
         } catch (Exception ex) {
             return Response.status(Response.Status.SEE_OTHER)
@@ -125,13 +130,18 @@ public class UsersResource {
     }
     
     @GET
-    @Path("password/{username}")
+    @Path("pw/{username}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUserWithPw(@PathParam("username") String username) {
         try {
             User user = UserDB.getUserWithPw(username);
             String json = new Gson().toJson(user);
+            if(user.getUsername()== null){
+                return Response.status(Response.Status.SEE_OTHER)
+                    .entity("Error: No existe usuario")
+                    .build();
+            }
             return Response.ok(json, MediaType.APPLICATION_JSON).build();
         } catch (Exception ex) {
             return Response.status(Response.Status.SEE_OTHER)
@@ -170,7 +180,7 @@ public class UsersResource {
     public Response updateUser(@PathParam("username") String username, String userRegistro) {
         System.out.println("Llego una actualizacion");
         
-        User registro = new Gson().fromJson(userRegistro, User.class);
+        //User registro = new Gson().fromJson(userRegistro, User.class);
         User oldOne = null;
         User newOne = null;
         try {
@@ -213,7 +223,7 @@ public class UsersResource {
         try {
             oldOne = UserDB.getUserWithPw(username);
             newOne = new Gson().fromJson(userRegistro, User.class);
-            HashMap<String, String> changes = User.compare(oldOne, newOne);
+            HashMap<String, String> changes = User.compareWhithPw(oldOne, newOne);
             if(changes.size() > 0){
                 if(UserDB.modifyUser(username, changes)){
 
@@ -226,7 +236,8 @@ public class UsersResource {
                         .build();   
                 }
             }else{
-                return Response.status(Response.Status.SEE_OTHER)
+                
+                return Response.status(Response.Status.OK)
                         .entity("No hay cambios a: " + username + "")
                         .build();
             }

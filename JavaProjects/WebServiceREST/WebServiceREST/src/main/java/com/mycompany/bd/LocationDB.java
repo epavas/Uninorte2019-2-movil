@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class LocationDB {
     public static final ArrayList<CurrentLocation> getCurrentLocations() throws ParseException{
         ArrayList<CurrentLocation> queryResult = new ArrayList<>();
-        String query = "SELECT * FROM v_current_locations;";
+        String query = "SELECT * FROM cuerrent_location";
         Connection dbConnection = ConexionBD.getConexion();
         try(
             Statement stmt = dbConnection.createStatement();
@@ -34,8 +34,8 @@ public class LocationDB {
                     new CurrentLocation(
                         rs.getString("username"),
                         rs.getString("full_name"),
-                        rs.getString("lastLat"),
-                        rs.getString("lastLon"),
+                        rs.getString("lat"),
+                        rs.getString("lon"),
                         rs.getString("status"),
                         rs.getString("lastSeen")
                     )
@@ -133,24 +133,32 @@ public class LocationDB {
     public static final boolean writeLocation(Location newLocation) throws SQLException{
         boolean success = true;
         String query 
-            = "INSERT INTO locations(" +
+                ="INSERT INTO location("+                
                 "lat, " +
                 "lon, " +
-                "location_timestamp, " +
-                "username" +
-            ") VALUES(?, ?, ?, ?);";
+                "lastSeen, " +
+                "username" +                
+            ") VALUES('"
+                + newLocation.getLatString() + "', '"
+                + newLocation.getLonString() + "', '"
+                + newLocation.getLastSeen() + "', '"
+                + newLocation.getUsername() + "');";
         Connection dbConnection = ConexionBD.getConexion();
         try{
             PreparedStatement pstmt = dbConnection.prepareStatement(query);
-            pstmt.setString(1, newLocation.getLatString());
+            /*pstmt.setString(1, newLocation.getLatString());
             pstmt.setString(2, newLocation.getLonString());
-            pstmt.setString(3, newLocation.getLocation_timestampISOFormatted());
-            pstmt.setString(4, newLocation.getUsername());
+            pstmt.setString(3, newLocation.getLastSeenISOFormatted());
+            pstmt.setString(4, newLocation.getUsername());*/
             System.out.println("[API] Fetching updates...");
+            
             pstmt.executeUpdate();
+            
             System.out.println("[API] Updates fetched!");
         }catch(SQLException e){
+            
             success = false;
+            System.out.println("Error:" +e.getMessage());
         }finally{
             if (dbConnection != null) {
                 System.out.println("[API] Closing connection...");

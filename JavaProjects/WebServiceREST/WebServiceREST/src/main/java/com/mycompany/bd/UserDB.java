@@ -398,7 +398,7 @@ public class UserDB {
                     new Location(
                         rs.getString("lat"),
                         rs.getString("lon"),
-                        rs.getString("location_timestamp"),
+                        rs.getString("lastSeen"),
                         rs.getString("username")
                     )
                 );
@@ -423,7 +423,7 @@ public class UserDB {
     ) throws ParseException {
         ArrayList<Location> queryResult = new ArrayList<>();
         String query 
-            = "SELECT * FROM locations WHERE username = ? AND (location_timestamp between ? AND ?);";
+            = "SELECT * FROM locations WHERE username = ? AND (lastSeen between ? AND ?);";
         
         Connection dbConnection = ConexionBD.getConexion();
         try{
@@ -438,7 +438,7 @@ public class UserDB {
                     new Location(
                         rs.getString("lat"),
                         rs.getString("lon"),
-                        rs.getString("location_timestamp"),
+                        rs.getString("lastSeen"),
                         rs.getString("username")
                     )
                 );
@@ -464,7 +464,7 @@ public class UserDB {
             = "INSERT INTO locations(" +
                 "lat, " +
                 "lon, " +
-                "location_timestamp, " +
+                "lastSeen, " +
                 "username" +
             ") VALUES(?, ?, ?, ?);";
         Connection dbConnection = ConexionBD.getConexion();
@@ -472,7 +472,7 @@ public class UserDB {
             PreparedStatement pstmt = dbConnection.prepareStatement(query);
             pstmt.setString(1, newLocation.getLatString());
             pstmt.setString(2, newLocation.getLonString());
-            pstmt.setString(3, newLocation.getLocation_timestampISOFormatted());
+            pstmt.setString(3, newLocation.getLastSeenISOFormatted());
             pstmt.setString(4, newLocation.getUsername());
             System.out.println("[API] Fetching updates...");
             pstmt.executeUpdate();

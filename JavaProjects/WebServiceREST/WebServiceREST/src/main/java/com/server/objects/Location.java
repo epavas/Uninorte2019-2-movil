@@ -16,14 +16,14 @@ import java.util.Date;
 public class Location {
     private double lat;
     private double lon;
-    private Date location_timestamp;
+    private Date lastSeen;
     private String username;
 
     public Location(
         String lat, String lon, String location_timestamp, String username) throws ParseException {
         this.lat = Double.parseDouble(lat);
         this.lon = Double.parseDouble(lon);
-        this.location_timestamp 
+        this.lastSeen 
             = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
                 .parse(location_timestamp);
         this.username = username;
@@ -46,23 +46,23 @@ public class Location {
     }
 
     public String getLonString() {
-        return Double.toString(lat);
+        return Double.toString(lon);
     }
     
     public void setLon(double lon) {
         this.lon = lon;
     }
 
-    public Date getLocation_timestamp() {
-        return location_timestamp;
+    public Date getLastSeen() {
+        return lastSeen;
     }
 
-    public String getLocation_timestampISOFormatted(){
-        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(location_timestamp);
+    public String getLastSeenISOFormatted(){
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(lastSeen);
     }
     
-    public void setLocation_timestamp(Date location_timestamp) {
-        this.location_timestamp = location_timestamp;
+    public void setLastSeen(Date lastSeen) {
+        this.lastSeen = lastSeen;
     }
     
     public String getUsername() {
