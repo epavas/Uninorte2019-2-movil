@@ -1,6 +1,6 @@
 # Uninorte2019-2-movil
 Api para el curso de de programacion movil usando android estudio!
-Api for the first term of app develompent course on android studio!
+
 
 ## Controladores
 * User Controller
@@ -12,6 +12,7 @@ Api for the first term of app develompent course on android studio!
 * [GET METHOD] @ (http://ip:8080/MovilAPI/api/users) - Este metodo retorna todos los usuarios.
 * [POST METHOD] @ (http://ip:8080/MovilAPI/api/users) - This method is used to register users.<br/>
 **The body should look like:**
+```
 {
 	"username": "Elvis",
 	"password": "1234",
@@ -24,10 +25,10 @@ Api for the first term of app develompent course on android studio!
 	"status": "online",
 	"lastSeen": "Sep 29, 2019 6:21:32 AM"
 }
-
-* [PUT METHOD] @ (http://localhost:8080/WebServiceREST/resources/users/{username}) - Actualiza el usuario username.<br/>
+```
+* [PUT METHOD] @ (http://ip:8080/WebServiceREST/resources/users/{username}) - Actualiza el usuario username.<br/>
 **The body should look like:**
-   ```
+```
 {
 	"username": "Elvis",
 	"password": "1235",
@@ -40,4 +41,4 @@ Api for the first term of app develompent course on android studio!
 	"status": "online",
 	"lastSeen": "Sep 29, 2019 6:21:32 AM"
 }
-  ```
+```
