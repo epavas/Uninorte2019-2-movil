@@ -24,6 +24,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.POST;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -88,13 +89,13 @@ public class MessagesResource {
     }
     
     @POST
-    @Path("/withinRangeLimited")
+    @Path("/{limite}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getMessagesWithinDateLimited(String body) throws ParseException, SQLException{
+    public Response getMessagesWithinDateLimited(@PathParam("limite") int limite, String body) throws ParseException, SQLException{
         DateRange dpr = new Gson().fromJson(body, DateRange.class);
         ArrayList<Message> response 
-            = MessagesDB.getMessagesWithinDateLimited(dpr.getFirst_Date(), dpr.getLast_Date());
+            = MessagesDB.getMessagesWithinDateLimited(dpr.getFirst_Date(), dpr.getLast_Date(), limite);
         return Response.ok(new Gson().toJson(response)).build();
         
     }

@@ -58,19 +58,19 @@ public class LocationDB {
 
     public static final ArrayList<Location> getUserLocations(String username) throws ParseException{
         ArrayList<Location> queryResult = new ArrayList<>();
-        String query = "SELECT * FROM locations WHERE username = ?;";
+        String query = "SELECT * FROM location WHERE username = ?;";
         Connection dbConnection = ConexionBD.getConexion();
         try{
             PreparedStatement pstmt = dbConnection.prepareStatement(query);
             pstmt.setString(1, username);
             ResultSet rs = pstmt.executeQuery();
-            System.out.println("[API] Fetching results...");
+            System.out.println("[API] Fetching results..."+pstmt.toString());
             while (rs.next()) {
                 queryResult.add(
                     new Location(
                         rs.getString("lat"),
                         rs.getString("lon"),
-                        rs.getString("location_timestamp"),
+                        rs.getString("lastSeen"),
                         rs.getString("username")
                     )
                 );
@@ -95,8 +95,8 @@ public class LocationDB {
     ) throws ParseException {
         ArrayList<Location> queryResult = new ArrayList<>();
         String query 
-            = "SELECT * FROM locations WHERE username = ? AND (location_timestamp between ? AND ?);";
-        
+            
+            = "SELECT * FROM location WHERE username = ? AND (lastSeen between ? AND ?);";
         Connection dbConnection = ConexionBD.getConexion();
         try{
             PreparedStatement pstmt = dbConnection.prepareStatement(query);
@@ -110,7 +110,7 @@ public class LocationDB {
                     new Location(
                         rs.getString("lat"),
                         rs.getString("lon"),
-                        rs.getString("location_timestamp"),
+                        rs.getString("lastSeen"),
                         rs.getString("username")
                     )
                 );

@@ -20,12 +20,12 @@ public class Location {
     private String username;
 
     public Location(
-        String lat, String lon, String location_timestamp, String username) throws ParseException {
+        String lat, String lon, String lastSeen, String username) throws ParseException {
         this.lat = Double.parseDouble(lat);
         this.lon = Double.parseDouble(lon);
         this.lastSeen 
             = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
-                .parse(location_timestamp);
+                .parse(lastSeen);
         this.username = username;
     }
 

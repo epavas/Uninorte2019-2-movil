@@ -80,61 +80,7 @@ public class MainActivity extends AppCompatActivity
     Test serviceTest;
 
 
-    public void initializeDataBase(){
-        try{
-            appDatabase= Room.
-                    databaseBuilder(this,AppDatabase.class,
-                            "app-database").
-                    fallbackToDestructiveMigration().build();
-        }catch (Exception error){
-            Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
-        }
-    }
-    public void initializeGPSManager(){
-        gpsManager=new GPSManager(this,this);
-        gpsManager.initializeLocationManager();
-    }
-
-    public void initializeBroadcastManagerForSocketIO(){
-        broadcastManagerForSocketIO=new BroadcastManager(this,
-                SocketManagementService.
-                        SOCKET_SERVICE_CHANNEL,this);
-
-    }
-
-    public String enviarDatosGET(String ip){
-        URL url= null;
-        String linea = "";
-        int respuesta = 0;
-        StringBuilder resul =  null;
-        String endpoint="http://127.0.0.1:8080/WebServiceREST/resources/server";
-        String methodType="GET";
-        String action="";
-
-        try{
-            url=new URL(endpoint+"/"+action);
-            HttpURLConnection urlConnection=(HttpURLConnection)url.openConnection();
-            //urlConnection.setRequestMethod("POST");
-            respuesta = urlConnection.getResponseCode();
-
-            resul = new StringBuilder();
-
-            if (respuesta == HttpURLConnection.HTTP_OK){
-                BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-
-                while ((linea=reader.readLine())!=null){
-                    resul.append(linea);
-                }
-            }
-
-        }catch(Exception error) {
-            System.out.println(error.getMessage());
-            Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
-        }
-        Toast.makeText(this,resul.toString()+"",Toast.LENGTH_LONG).show();
-        return  resul.toString();
-
-    }
+    /*#############   INICIALIZACION COMPONENTS   ################*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -187,7 +133,7 @@ public class MainActivity extends AppCompatActivity
                 startService(intent);
                 serviceStarted=true;
                 String server_host = ((EditText)findViewById(R.id.server_ip_txt)).getText()+"";
-               // String message = enviarDatosGET(server_host);
+                // String message = enviarDatosGET(server_host);
                 //Toast.makeText(this,message,Toast.LENGTH_LONG).show();
                 //listOfMessages.add(message);
                 //((ListView)findViewById(R.id.messages_list_view)).setAdapter(adapter);
@@ -202,10 +148,73 @@ public class MainActivity extends AppCompatActivity
         adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, listOfMessages);
     }
 
+    public void initializeDataBase(){
+        try{
+            appDatabase= Room.
+                    databaseBuilder(this,AppDatabase.class,
+                            "app-database").
+                    fallbackToDestructiveMigration().build();
+        }catch (Exception error){
+            Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void initializeGPSManager(){
+        gpsManager=new GPSManager(this,this);
+        gpsManager.initializeLocationManager();
+    }
+
+    public void initializeBroadcastManagerForSocketIO(){
+        broadcastManagerForSocketIO=new BroadcastManager(this,
+                SocketManagementService.
+                        SOCKET_SERVICE_CHANNEL,this);
+
+    }
+
+
+    /*#############   CONEXION WEB SERVICE  ################*/
+
+    public String enviarDatosGET(String ip){
+        URL url= null;
+        String linea = "";
+        int respuesta = 0;
+        StringBuilder resul =  null;
+        String endpoint="http://127.0.0.1:8080/WebServiceREST/resources/server";
+        String methodType="GET";
+        String action="";
+
+        try{
+            url=new URL(endpoint+"/"+action);
+            HttpURLConnection urlConnection=(HttpURLConnection)url.openConnection();
+            //urlConnection.setRequestMethod("POST");
+            respuesta = urlConnection.getResponseCode();
+
+            resul = new StringBuilder();
+
+            if (respuesta == HttpURLConnection.HTTP_OK){
+                BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+
+                while ((linea=reader.readLine())!=null){
+                    resul.append(linea);
+                }
+            }
+
+        }catch(Exception error) {
+            System.out.println(error.getMessage());
+            Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
+        }
+        Toast.makeText(this,resul.toString()+"",Toast.LENGTH_LONG).show();
+        return  resul.toString();
+
+    }
+
+
+    /*#############   BASE DE DATOS DAO   ################*/
+
     public void createUser(String userName, String userEmail,String userPassword){
         final User user=new User();
-        user.userName=userName;
-        user.userEmail=userEmail;
+        user.username=userName;
+        user.email=userEmail;
         user.password=userPassword;
         try {
             AsyncTask.execute(new Runnable() {
@@ -220,7 +229,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
+    /*#############   OVERRIDE   ################*/
 
     @Override
     public void onBackPressed() {
@@ -317,14 +326,6 @@ public class MainActivity extends AppCompatActivity
             }
     }
 
-    public void sendBroadcastMessage(String message){
-        if(serviceStarted)
-            if(broadcastManagerForSocketIO!=null){
-                broadcastManagerForSocketIO.sendBroadcast(
-                        SocketManagementService.CLIENT_TO_SERVER_MESSAGE,
-                        message);
-            }
-    }
 
     @Override
     public void gpsErrorHasBeenThrown(final Exception error) {
@@ -409,19 +410,34 @@ public class MainActivity extends AppCompatActivity
         mapController.setCenter(startPoint);
     }
 
+
     @Override
     public void MessageReceivedThroughBroadcastManager(final String channel,final String type, final String message) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                listOfMessages.add( message);
-                listViewMessages = ((ListView)findViewById(R.id.messages_list_view));
-                listViewMessages.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
-                listViewMessages.setSelection(listOfMessages.size() - 1);
+
+                showMessages(message);
             }
         });
 
+    }
+
+    public void sendBroadcastMessage(String message){
+        if(serviceStarted)
+            if(broadcastManagerForSocketIO!=null){
+                broadcastManagerForSocketIO.sendBroadcast(
+                        SocketManagementService.CLIENT_TO_SERVER_MESSAGE,
+                        message);
+            }
+    }
+
+    public void showMessages(String message){
+        listOfMessages.add( message);
+        listViewMessages = ((ListView)findViewById(R.id.messages_list_view));
+        listViewMessages.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+        listViewMessages.setSelection(listOfMessages.size() - 1);
     }
 
     @Override

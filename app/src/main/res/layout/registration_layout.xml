@@ -17,7 +17,7 @@
         android:textSize="34dp" />
 
     <EditText
-        android:id="@+id/user_name"
+        android:id="@+id/r_user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -29,8 +29,9 @@
         android:hint="Username"
         android:textColor="@color/uninorteRed" />
 
+
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/r_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -42,6 +43,56 @@
         android:hint="Password"
         android:inputType="numberPassword"
         android:textColor="@color/uninorteRed" />
+
+    <EditText
+        android:id="@+id/r_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/futura_medium"
+        android:gravity="center"
+        android:hint="first_name"
+        android:textColor="@color/uninorteRed" />
+    <EditText
+        android:id="@+id/r_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/futura_medium"
+        android:gravity="center"
+        android:hint="last_name"
+        android:textColor="@color/uninorteRed" />
+    <EditText
+        android:id="@+id/r_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/futura_medium"
+        android:gravity="center"
+        android:hint="full_name"
+        android:textColor="@color/uninorteRed" />
+    <EditText
+        android:id="@+id/r_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/futura_medium"
+        android:gravity="center"
+        android:hint="email"
+        android:textColor="@color/uninorteRed" />
+
 
     <Button
         android:id="@+id/registration_button"

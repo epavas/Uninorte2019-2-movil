@@ -57,6 +57,7 @@ public class LocationResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getLocations() throws ParseException{
         ArrayList<CurrentLocation> response = LocationDB.getCurrentLocations();
+        System.out.println("OK"+response.toString());
         return Response.ok(gson.toJson(response),MediaType.TEXT_PLAIN).build();
         
     }

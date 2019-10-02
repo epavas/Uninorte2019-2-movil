@@ -123,7 +123,7 @@ public class MessagesDB {
     }
     
     public static final ArrayList<Message> getMessagesWithinDateLimited(
-        String initialDate, String lastDate
+        String initialDate, String lastDate, int limite
     ) throws ParseException, SQLException{
         ArrayList<Message> queryResult = new ArrayList<>();
         String query 
@@ -135,7 +135,7 @@ public class MessagesDB {
             PreparedStatement pstmt = dbConnection.prepareStatement(query);
             pstmt.setString(1, initialDate);
             pstmt.setString(2, lastDate);
-            pstmt.setInt(3, 100);
+            pstmt.setInt(3, limite);
             ResultSet rs = pstmt.executeQuery();
             System.out.println("[API] Fetching results...");
             while (rs.next()) {
