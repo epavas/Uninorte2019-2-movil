@@ -59,7 +59,7 @@ Api para el curso de de programacion movil usando android estudio!
 	"lastLat": "9.963889",
 	"lastLon": "-74.796387",
 	"status": "online",
-	"lastSeen": "Sep 29, 2019 6:21:32 AM"
+	"lastSeen": "2019-09-29 01:20:00.00"
 }
 ```
 * [DELETE METHOD] @ (http://ip:8080/WebServiceREST/resources/users/{username}) - Elimina  el usuario username.<br/>
@@ -75,5 +75,13 @@ Api para el curso de de programacion movil usando android estudio!
     "lon": -74.796387,
     "lastSeen": "2019-09-29 01:20:00.000",
     "status": "online"
+  }
+  ```
+* [GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/location/{username}) - Este metodo retorna las ubicaciones de un usuario.
+* [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/location/{username}) - Este metodo retorna las ubicaciones de un usuario entre dos fechas, recordar (initialDate, lastDate] acotado de esa forma.
+  ```
+  {
+    "first_Date": "2019-09-29 01:20:00.000",
+    "last_Date": "2019-09-29 01:20:00.000"
   }
   ```
