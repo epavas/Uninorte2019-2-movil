@@ -110,9 +110,3 @@ Api para el curso de de programacion movil usando android estudio!
   }
   ```
   
-  ```
-  {
-    "first_Date": "2019-09-29 01:20:00.000",
-    "last_Date": "2019-09-29 01:20:00.000"
-  }
-  ```
