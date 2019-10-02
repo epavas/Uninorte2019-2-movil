@@ -15,6 +15,9 @@ import com.example.myfirstapplication.database.AppDatabase;
 import com.example.myfirstapplication.gps.GPSManager;
 import com.example.myfirstapplication.gps.GPSManagerCallerInterface;
 import com.example.myfirstapplication.model.User;
+import com.example.myfirstapplication.model.CurrentLocation;
+
+
 import com.example.myfirstapplication.network.SocketManagementService;
 import com.example.myfirstapplication.seviceWEB.Test;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -55,6 +58,12 @@ import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider;
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
+//Para Overlay
+import org.osmdroid.views.overlay.ItemizedIconOverlay;
+import org.osmdroid.views.overlay.ItemizedOverlayWithFocus;
+import org.osmdroid.views.overlay.OverlayItem;
+import android.graphics.Color;
+//
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -454,4 +463,85 @@ public class MainActivity extends AppCompatActivity
         }
         super.onDestroy();
     }
+
+    public void DrawPointsUsers(ArrayList<CurrentLocation> users) {
+        //Recibe puntos gps y los dibuja //
+        ArrayList<OverlayItem> offline = new ArrayList<>();
+        ArrayList<OverlayItem> online = new ArrayList<>();
+        for (CurrentLocation u : users) {
+            if (u.status.equals("0")) {
+                offline.add(new OverlayItem("User: "+u.username + ", " + u.lastSeen,
+                        "", new GeoPoint(Double.valueOf(u.lat), Double.valueOf(u.lon)))); // Lat/Lon decimal degrees
+            }else if (u.status.equals("1")){
+                online.add(new OverlayItem("User: "+u.username + ", " + u.lastSeen,
+                        "", new GeoPoint(Double.valueOf(u.lat), Double.valueOf(u.lon))));
+            }
+        }
+
+        //the overlay
+        ItemizedOverlayWithFocus<OverlayItem> offlineOverlay = new ItemizedOverlayWithFocus<>(offline,
+                new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
+                    @Override
+                    public boolean onItemSingleTapUp(final int index, final OverlayItem item) {
+                        //do something
+                        return true;
+                    }
+
+                    @Override
+                    public boolean onItemLongPress(final int index, final OverlayItem item) {
+                        return false;
+                    }
+                }, this.getApplicationContext());
+        offlineOverlay.setFocusItemsOnTap(true);
+        offlineOverlay.setMarkerBackgroundColor(Color.RED);
+        offlineOverlay.setMarkerDescriptionForegroundColor(Color.WHITE);
+        offlineOverlay.setMarkerTitleForegroundColor(Color.WHITE);
+        ItemizedOverlayWithFocus<OverlayItem> onlineOverlay = new ItemizedOverlayWithFocus<>(online,
+                new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
+                    @Override
+                    public boolean onItemSingleTapUp(final int index, final OverlayItem item) {
+                        //do something
+                        return true;
+                    }
+
+                    @Override
+                    public boolean onItemLongPress(final int index, final OverlayItem item) {
+                        return false;
+                    }
+                }, this.getApplicationContext());
+        onlineOverlay.setFocusItemsOnTap(true);
+        onlineOverlay.setMarkerBackgroundColor(Color.GREEN);
+        map.getOverlays().clear();
+        map.getOverlays().add(offlineOverlay);
+        map.getOverlays().add(onlineOverlay);
+
+    }
+    public void DrawPointsHistory(ArrayList<com.example.myfirstapplication.model.Location> coordenadasHistoricas, String username) {
+        ArrayList<OverlayItem> markers = new ArrayList<>();
+
+        for ( com.example.myfirstapplication.model.Location c : coordenadasHistoricas) {
+            markers.add(new OverlayItem("User: "+username+ ", " + c.lastSeen,
+                    "", new GeoPoint(Double.valueOf(c.lat), Double.valueOf(c.lon)))); // Lat/Lon decimal degrees
+        }
+
+        //the overlay
+        ItemizedOverlayWithFocus<OverlayItem> markersOverlay = new ItemizedOverlayWithFocus<>(markers,
+                new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
+                    @Override
+                    public boolean onItemSingleTapUp(final int index, final OverlayItem item) {
+                        //do something
+                        return true;
+                    }
+
+                    @Override
+                    public boolean onItemLongPress(final int index, final OverlayItem item) {
+                        return false;
+                    }
+                }, this.getApplicationContext());
+        markersOverlay.setFocusItemsOnTap(true);
+        map.getOverlays().clear();
+        map.getOverlays().add(markersOverlay);
+    }
+
+
 }
