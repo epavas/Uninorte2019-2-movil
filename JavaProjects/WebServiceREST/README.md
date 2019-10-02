@@ -59,21 +59,55 @@ Api para el curso de de programacion movil usando android estudio!
 	"lastLat": "9.963889",
 	"lastLon": "-74.796387",
 	"status": "online",
-	"lastSeen": "Sep 29, 2019 6:21:32 AM"
+	"lastSeen": "2019-09-29 01:20:00.00"
 }
 ```
 * [DELETE METHOD] @ (http://ip:8080/WebServiceREST/resources/users/{username}) - Elimina  el usuario username.<br/>
 
 ### Location Controller Methods
 * [GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/location) - Este metodo retorna las ubicaciones de los usuarios.
-* [POST METHOD] @ (http://ip:8080/MovilAPI/api/users) - Este metodo actualiza la ubicacion del usuario .<br/>
+* [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/location) - Este metodo actualiza la ubicacion del usuario .<br/>
   ```
   {
     "username": "Elvis",
     "full_name": "Elvis",
-    "lat": 10.963889,
-    "lon": -74.796387,
+    "lat": "10.963889",
+    "lon": "-74.796387",
     "lastSeen": "2019-09-29 01:20:00.000",
     "status": "online"
   }
   ```
+* [GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/location/{username}) - Este metodo retorna las ubicaciones de un usuario.
+* [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/location/{username}) - Este metodo retorna las ubicaciones de un usuario entre dos fechas, recordar (initialDate, lastDate] acotado de esa forma.
+  ```
+  {
+    "first_Date": "2019-09-29 01:20:00.000",
+    "last_Date": "2019-09-29 01:20:00.000"
+  }
+  ```
+  ### Message Controller Methods
+* [GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/messages) - Este metodo retorna todos los mensajes de los usuarios.
+* [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/messages) - Este metodo envia un mensaje.<br/>
+  ```
+	{
+		"body": "Primer mesnaje",
+		"message_timestamp": "Sep 29, 2019 1:20:00 AM",
+		"sender": "Elvis"
+	}
+  ```
+  
+ * [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/messages/withinDate) - Este metodo retorna las ubicaciones de los usuarios entre dos fechas.
+```
+  {
+    "first_Date": "2019-09-29 01:20:00.000",
+    "last_Date": "2019-09-29 01:20:00.000"
+  }
+```
+  
+ * [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/{limite}) - Este metodo retorna las ubicaciones de los usuarios con una cantidad limite.<br/>
+```
+  {
+    "first_Date": "2019-09-29 01:20:00.000",
+    "last_Date": "2019-09-29 01:20:00.000"
+  }
+```
