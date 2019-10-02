@@ -95,18 +95,19 @@ Api para el curso de de programacion movil usando android estudio!
 		"sender": "Elvis"
 	}
   ```
- * [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/messages/withinDate) - Este metodo retorna las ubicaciones de los usuarios entre dos fechas.
-   ```
-  {
-    "first_Date": "2019-09-29 01:20:00.000",
-    "last_Date": "2019-09-29 01:20:00.000"
-  }
-  ```
- * [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/{limite}) - Este metodo retorna las ubicaciones de los usuarios con una cantidad limite.<br/>
-  ```
-  {
-    "first_Date": "2019-09-29 01:20:00.000",
-    "last_Date": "2019-09-29 01:20:00.000"
-  }
-  ```
   
+ * [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/messages/withinDate) - Este metodo retorna las ubicaciones de los usuarios entre dos fechas.
+```
+  {
+    "first_Date": "2019-09-29 01:20:00.000",
+    "last_Date": "2019-09-29 01:20:00.000"
+  }
+```
+  
+ * [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/{limite}) - Este metodo retorna las ubicaciones de los usuarios con una cantidad limite.<br/>
+```
+  {
+    "first_Date": "2019-09-29 01:20:00.000",
+    "last_Date": "2019-09-29 01:20:00.000"
+  }
+```
