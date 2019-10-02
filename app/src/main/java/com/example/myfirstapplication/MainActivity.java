@@ -157,6 +157,8 @@ public class MainActivity extends AppCompatActivity
         }catch (Exception error){
             Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
         }
+        //Location ubicacion = new com.example.myfirstapplication.model.Location();
+
     }
 
     public void initializeGPSManager(){

@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "location")
 public class Location {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id")
+    @ColumnInfo(name = "idLocation")
     public int idLocation;
 
     @ColumnInfo(name = "lat")

@@ -4,7 +4,6 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.myfirstapplication.model.Location;
 import com.example.myfirstapplication.model.Messages;
 
 import java.util.List;

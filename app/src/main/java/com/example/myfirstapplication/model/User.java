@@ -10,7 +10,9 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "user")
 public class User {
     @PrimaryKey(autoGenerate = false)
-    @NonNull
+    @ColumnInfo(name = "idUser")
+    public int idUser;
+
     @ColumnInfo(name = "username")
     public String username;
 
@@ -40,5 +42,6 @@ public class User {
 
     @ColumnInfo(name = "lastSeen")
     public String lastSeen;
+
 
 }

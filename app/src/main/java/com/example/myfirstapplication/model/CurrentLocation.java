@@ -3,9 +3,14 @@ package com.example.myfirstapplication.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "currentLocation")
 public class CurrentLocation {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "idCurrentLocation")
+    public int idCurrentLocation;
 
     @ColumnInfo(name = "username")
     public String username;
