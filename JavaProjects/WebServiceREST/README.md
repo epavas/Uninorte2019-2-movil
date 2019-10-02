@@ -71,8 +71,8 @@ Carpeta de objetos [objetos](https://github.com/epavas/Uninorte2019-2-movil/tree
 * [DELETE METHOD] @ (http://ip:8080/WebServiceREST/resources/users/{username}) - Elimina  el usuario username.<br/>
 
 ### Location Controller Methods [ver Objeto](https://github.com/epavas/Uninorte2019-2-movil/blob/master/JavaProjects/WebServiceREST/WebServiceREST/src/main/java/com/mycompany/webservicerest/LocationResource.java)
-* [GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/location) - Este metodo retorna las ubicaciones de los usuarios.
-* [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/location) - Este metodo actualiza la ubicacion del usuario .<br/>
+* [GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/ubicacion) - Este metodo retorna las ubicaciones de los usuarios.
+* [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/ubicacion) - Este metodo actualiza la ubicacion del usuario .<br/>
   ```
   {
     "username": "Elvis",
@@ -83,8 +83,8 @@ Carpeta de objetos [objetos](https://github.com/epavas/Uninorte2019-2-movil/tree
     "status": "online"
   }
   ```
-* [GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/location/{username}) - Este metodo retorna las ubicaciones de un usuario.
-* [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/location/{username}) - Este metodo retorna las ubicaciones de un usuario entre dos fechas, recordar (initialDate, lastDate] acotado de esa forma.
+* [GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/ubicacion/{username}) - Este metodo retorna las ubicaciones de un usuario.
+* [POST METHOD] @ (http://localhost:8080/WebServiceREST/resources/ubicacion/{username}) - Este metodo retorna las ubicaciones de un usuario entre dos fechas, recordar (initialDate, lastDate] acotado de esa forma.
   ```
   {
     "first_Date": "2019-09-29 01:20:00.000",

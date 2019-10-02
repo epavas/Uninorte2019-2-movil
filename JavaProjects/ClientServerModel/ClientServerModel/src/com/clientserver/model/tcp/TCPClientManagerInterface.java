@@ -7,7 +7,7 @@ package com.clientserver.model.tcp;
 
 /**
  *
- * @author asaad
+ * @author Administrador
  */
 public interface TCPClientManagerInterface {
     public void MessageReceived(String message);

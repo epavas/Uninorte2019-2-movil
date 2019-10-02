@@ -10,7 +10,7 @@ import com.clientserver.model.tcp.TCPClientManagerInterface;
 
 /**
  *
- * @author asaad
+ * @author Administrador
  */
 public class GUIForTCPClient extends javax.swing.JFrame implements TCPClientManagerInterface{
 

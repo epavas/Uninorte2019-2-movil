@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Real-time location"
+            android:text="Real-time ubicacion"
             android:fontFamily="@font/futurafontfamily"
             android:textSize="16sp"
             android:layout_marginLeft="10dp"
@@ -56,7 +56,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Last location data"
+            android:text="Last ubicacion data"
             android:fontFamily="@font/futurafontfamily"
             android:textSize="16sp"
             android:layout_marginLeft="10dp"

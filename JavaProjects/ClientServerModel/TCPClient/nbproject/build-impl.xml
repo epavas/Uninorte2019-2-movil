@@ -345,7 +345,7 @@ is divided into following sections:
                     </and>
                 </condition>
                 <echo if:set="warn.excludes.internal" level="warning" message="The javac excludes are not supported in the JDK 9 Named Module."/>
-                <property location="${build.dir}/empty" name="empty.dir"/>
+                <property ubicacion="${build.dir}/empty" name="empty.dir"/>
                 <mkdir dir="${empty.dir}"/>
                 <mkdir dir="@{apgeneratedsrcdir}"/>
                 <condition property="processormodulepath.set">
@@ -403,7 +403,7 @@ is divided into following sections:
             <attribute default="${empty.dir}" name="gensrcdir"/>
             <element name="customize" optional="true"/>
             <sequential>
-                <property location="${build.dir}/empty" name="empty.dir"/>
+                <property ubicacion="${build.dir}/empty" name="empty.dir"/>
                 <mkdir dir="${empty.dir}"/>
                 <mkdir dir="@{apgeneratedsrcdir}"/>
                 <javac debug="@{debug}" deprecation="${javac.deprecation}" destdir="@{destdir}" encoding="${source.encoding}" excludes="@{excludes}" fork="${javac.fork}" includeantruntime="false" includes="@{includes}" source="${javac.source}" sourcepath="@{sourcepath}" srcdir="@{srcdir}" target="${javac.target}" tempdir="${java.io.tmpdir}">
@@ -446,7 +446,7 @@ is divided into following sections:
             <attribute default="${empty.dir}" name="gensrcdir"/>
             <element name="customize" optional="true"/>
             <sequential>
-                <property location="${build.dir}/empty" name="empty.dir"/>
+                <property ubicacion="${build.dir}/empty" name="empty.dir"/>
                 <mkdir dir="${empty.dir}"/>
                 <javac debug="@{debug}" deprecation="${javac.deprecation}" destdir="@{destdir}" encoding="${source.encoding}" excludes="@{excludes}" fork="${javac.fork}" includeantruntime="false" includes="@{includes}" source="${javac.source}" sourcepath="@{sourcepath}" srcdir="@{srcdir}" target="${javac.target}" tempdir="${java.io.tmpdir}">
                     <src>
@@ -917,7 +917,7 @@ is divided into following sections:
                     </classpath>
                     <modulepath>
                         <pathelement path="@{modulepath}"/>
-                        <pathelement location="${module.build.classes.dir}"/>
+                        <pathelement ubicacion="${module.build.classes.dir}"/>
                     </modulepath>
                     <upgrademodulepath>
                         <path path="@{upgrademodulepath}"/>
@@ -1001,7 +1001,7 @@ is divided into following sections:
             <attribute default="${manifest.file}" name="manifest"/>
             <element name="customize" optional="true"/>
             <sequential>
-                <property location="${build.classes.dir}" name="build.classes.dir.resolved"/>
+                <property ubicacion="${build.classes.dir}" name="build.classes.dir.resolved"/>
                 <pathconvert property="run.classpath.without.build.classes.dir">
                     <path path="${run.classpath}"/>
                     <map from="${build.classes.dir.resolved}" to=""/>
@@ -1065,7 +1065,7 @@ is divided into following sections:
                 ===================
             -->
     <target name="-deps-jar-init" unless="built-jar.properties">
-        <property location="${build.dir}/built-jar.properties" name="built-jar.properties"/>
+        <property ubicacion="${build.dir}/built-jar.properties" name="built-jar.properties"/>
         <delete file="${built-jar.properties}" quiet="true"/>
     </target>
     <target if="already.built.jar.${basedir}" name="-warn-already-built-jar">
@@ -1081,8 +1081,8 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-jar.properties}"/>
-            <param location="${project.ClientServerModel}" name="call.subproject"/>
-            <param location="${project.ClientServerModel}/build.xml" name="call.script"/>
+            <param ubicacion="${project.ClientServerModel}" name="call.subproject"/>
+            <param ubicacion="${project.ClientServerModel}/build.xml" name="call.script"/>
             <param name="call.target" value="jar"/>
             <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
             <param name="transfer.not.archive.disabled" value="true"/>
@@ -1205,13 +1205,13 @@ is divided into following sections:
     <target depends="init,-init-macrodef-copylibs,compile,-pre-pre-jar,-pre-jar,-do-jar-create-manifest,-do-jar-copy-manifest,-do-jar-set-mainclass,-do-jar-set-profile,-do-jar-set-splashscreen" if="do.mkdist" name="-do-jar-copylibs">
         <j2seproject3:copylibs manifest="${tmp.manifest.file}"/>
         <echo level="info">To run this application from the command line without Ant, try:</echo>
-        <property location="${dist.jar}" name="dist.jar.resolved"/>
+        <property ubicacion="${dist.jar}" name="dist.jar.resolved"/>
         <echo level="info">java -jar "${dist.jar.resolved}"</echo>
     </target>
     <target depends="init,compile,-pre-pre-jar,-pre-jar,-do-jar-create-manifest,-do-jar-copy-manifest,-do-jar-set-mainclass,-do-jar-set-profile,-do-jar-set-splashscreen" if="do.archive" name="-do-jar-jar" unless="do.mkdist">
         <j2seproject1:jar manifest="${tmp.manifest.file}"/>
-        <property location="${build.classes.dir}" name="build.classes.dir.resolved"/>
-        <property location="${dist.jar}" name="dist.jar.resolved"/>
+        <property ubicacion="${build.classes.dir}" name="build.classes.dir.resolved"/>
+        <property ubicacion="${dist.jar}" name="dist.jar.resolved"/>
         <condition else="${dist.jar.resolved}" property="jar.usage.message.class.path.replacement" value="">
             <isset property="named.module.internal"/>
         </condition>
@@ -1220,7 +1220,7 @@ is divided into following sections:
             <map from="${build.classes.dir.resolved}" to="${jar.usage.message.class.path.replacement}"/>
         </pathconvert>
         <pathconvert property="run.modulepath.with.dist.jar">
-            <path location="${dist.jar.resolved}"/>
+            <path ubicacion="${dist.jar.resolved}"/>
             <path path="${run.modulepath}"/>
             <map from="${build.classes.dir.resolved}" to="${dist.jar.resolved}"/>
         </pathconvert>
@@ -1573,7 +1573,7 @@ is divided into following sections:
             </and>
         </condition>
         <fileset dir="${build.test.classes.dir}" id="run.test.packages.internal" includes="**/*.class"/>
-        <property location="${build.test.classes.dir}" name="build.test.classes.dir.abs.internal"/>
+        <property ubicacion="${build.test.classes.dir}" name="build.test.classes.dir.abs.internal"/>
         <pathconvert pathsep=" " property="run.test.addexports.internal" refid="run.test.packages.internal">
             <chainedmapper>
                 <regexpmapper from="^(.*)\Q${file.separator}\E.*\.class$$" to="\1"/>
@@ -1730,7 +1730,7 @@ is divided into following sections:
                 ===============
             -->
     <target name="-deps-clean-init" unless="built-clean.properties">
-        <property location="${build.dir}/built-clean.properties" name="built-clean.properties"/>
+        <property ubicacion="${build.dir}/built-clean.properties" name="built-clean.properties"/>
         <delete file="${built-clean.properties}" quiet="true"/>
     </target>
     <target if="already.built.clean.${basedir}" name="-warn-already-built-clean">
@@ -1746,8 +1746,8 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-clean.properties}"/>
-            <param location="${project.ClientServerModel}" name="call.subproject"/>
-            <param location="${project.ClientServerModel}/build.xml" name="call.script"/>
+            <param ubicacion="${project.ClientServerModel}" name="call.subproject"/>
+            <param ubicacion="${project.ClientServerModel}/build.xml" name="call.script"/>
             <param name="call.target" value="clean"/>
             <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
             <param name="transfer.not.archive.disabled" value="true"/>

@@ -14,14 +14,13 @@ import com.example.myfirstapplication.broadcast.BroadcastManagerCallerInterface;
 import com.example.myfirstapplication.database.AppDatabase;
 import com.example.myfirstapplication.gps.GPSManager;
 import com.example.myfirstapplication.gps.GPSManagerCallerInterface;
+import com.example.myfirstapplication.model.Ubicacion;
 import com.example.myfirstapplication.model.User;
 import com.example.myfirstapplication.model.CurrentLocation;
 
 
 import com.example.myfirstapplication.network.SocketManagementService;
 import com.example.myfirstapplication.seviceWEB.Test;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -71,7 +70,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, GPSManagerCallerInterface , BroadcastManagerCallerInterface {
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        LinearLayout messages_layout = findViewById(R.id.message_layout);
+        //LinearLayout messages_layout = findViewById(R.id.message_layout);
 
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -170,7 +168,7 @@ public class MainActivity extends AppCompatActivity
         }catch (Exception error){
             Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
         }
-        //Location ubicacion = new com.example.myfirstapplication.model.Location();
+        //Ubicacion ubicacion = new com.example.myfirstapplication.model.Ubicacion();
 
     }
 
@@ -526,10 +524,10 @@ public class MainActivity extends AppCompatActivity
         map.getOverlays().add(onlineOverlay);
 
     }
-    public void DrawPointsHistory(ArrayList<com.example.myfirstapplication.model.Location> coordenadasHistoricas, String username) {
+    public void DrawPointsHistory(ArrayList<Ubicacion> coordenadasHistoricas, String username) {
         ArrayList<OverlayItem> markers = new ArrayList<>();
 
-        for ( com.example.myfirstapplication.model.Location c : coordenadasHistoricas) {
+        for ( Ubicacion c : coordenadasHistoricas) {
             markers.add(new OverlayItem("User: "+username+ ", " + c.lastSeen,
                     "", new GeoPoint(Double.valueOf(c.lat), Double.valueOf(c.lon)))); // Lat/Lon decimal degrees
         }

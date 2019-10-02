@@ -4,11 +4,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "location")
-public class Location {
+@Entity(tableName = "ubicacion")
+public class Ubicacion {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "idLocation")
-    public int idLocation;
+    @ColumnInfo(name = "idUbicacion")
+    public int idUbicacion;
 
     @ColumnInfo(name = "lat")
     public String lat;

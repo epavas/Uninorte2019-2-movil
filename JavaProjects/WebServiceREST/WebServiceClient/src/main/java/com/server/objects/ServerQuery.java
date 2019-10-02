@@ -9,7 +9,7 @@ package com.server.objects;
 
 /**
  *
- * @author asaad
+ * @author Administrador
  */
 public class ServerQuery {
     
