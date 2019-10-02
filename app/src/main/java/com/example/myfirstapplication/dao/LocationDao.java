@@ -16,4 +16,7 @@ public interface LocationDao {
 
     @Insert
     void insertarLocation(Location location);
+
+    @Insert
+    void insertAll(Location... locations);
 }

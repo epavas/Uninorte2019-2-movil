@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.location.Location;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 
@@ -16,6 +17,7 @@ import com.example.myfirstapplication.broadcast.BroadcastManagerCallerInterface;
 import com.example.myfirstapplication.database.AppDatabase;
 import com.example.myfirstapplication.gps.GPSManager;
 import com.example.myfirstapplication.gps.GPSManagerCallerInterface;
+import com.example.myfirstapplication.model.User;
 
 
 import androidx.room.Room;
@@ -64,6 +66,7 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
                         .format( new Date());
 
 
+
                 //String passwordConfirmation = ((EditText) findViewById(R.id.reg_password_confirmation_value)).getText() + "";
 
 
@@ -80,6 +83,11 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
                 } catch (Exception e) {
                     e.printStackTrace();
                 }*/
+                if (createUser()){
+                    openMainActivity(username,password);
+                }
+
+
 
             }
         });
@@ -87,6 +95,15 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
         initializeDataBase();
         initializeGPSManager();
 
+    }
+
+    public void openMainActivity(String username, String password){
+        Intent intetToBecalled=new
+                Intent(getApplicationContext(),
+                MainActivity.class);
+        intetToBecalled.putExtra("user_name",username);
+        intetToBecalled.putExtra("user_password",password);
+        startActivity(intetToBecalled);
     }
 
     public void initializeDataBase(){
@@ -103,6 +120,42 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
     public void initializeGPSManager(){
         gpsManager = new GPSManager(this, this);
         gpsManager.initializeLocationManager();
+    }
+
+    /**
+     * Registra un usuario en la BD local
+     *
+     */
+    public boolean createUser(){
+        final User user=new User();
+        user.username=username;
+        user.password=password;
+        user.first_name = first_name;
+        user.last_name = last_name;
+        user.full_name = full_name;
+        user.email=email;
+        user.lastLat = lastLat;
+        user.lastLon = lastLon;
+        user.status = status;
+        user.lastSeen = lastSeen;
+
+        //Verificar si no existe el username en la base de datos
+        //[GET METHOD] @ (http://localhost:8080/WebServiceREST/resources/users/{usename}) - Retorna usuario sin su contraceña.
+        //Si no existe registrar
+        //Si ya existe return false
+        try {
+            AsyncTask.execute(new Runnable() {
+                @Override
+                public void run() {
+                    appDatabase.UserDao().insertAll(user);
+                }
+            });
+
+        }catch (Exception error){
+            Toast.makeText(this,error.getMessage(),Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
     }
 
     @Override

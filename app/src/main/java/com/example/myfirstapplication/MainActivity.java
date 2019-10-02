@@ -47,6 +47,7 @@ import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -100,6 +101,9 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        LinearLayout messages_layout = findViewById(R.id.message_layout);
+
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -222,6 +226,12 @@ public class MainActivity extends AppCompatActivity
 
     /*#############   BASE DE DATOS DAO   ################*/
 
+    /**
+     * Este metodo debe ir en el register
+     * @param userName
+     * @param userEmail
+     * @param userPassword
+     */
     public void createUser(String userName, String userEmail,String userPassword){
         final User user=new User();
         user.username=userName;

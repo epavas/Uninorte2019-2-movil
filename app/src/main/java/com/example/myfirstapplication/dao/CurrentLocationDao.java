@@ -23,6 +23,7 @@ public interface CurrentLocationDao {
     @Update
     void updateCurrentLocation(CurrentLocation currentLocation);
 
-
+    @Insert
+    void insertAll(CurrentLocation... currentLocations);
 
 }

@@ -30,5 +30,19 @@ public class LoginActivity extends Activity {
                 startActivity(intetToBecalled);
             }
         });
+        ((Button)findViewById(R.id.button_to_regist)).
+                setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                       Intent intentToBecalled =
+                               new Intent(getApplicationContext(),RegistrationActivity.class);
+                       startActivity(intentToBecalled);
+                    }
+                });
     }
+
+    public void loging(String username, String password){
+
+    }
+
 }

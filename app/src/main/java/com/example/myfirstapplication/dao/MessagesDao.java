@@ -16,4 +16,7 @@ public interface MessagesDao {
 
     @Insert
     void insertMessages(Messages mesages);
+
+    @Insert
+    void insertAll(Messages... mesages);
 }
